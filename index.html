@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>শুভ জন্মদিন</title>
+
+<style>
+
+body{
+margin:0;
+font-family:sans-serif;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#fbc2eb);
+background-size:400% 400%;
+animation:bgmove 10s ease infinite;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+border-radius:20px;
+padding:25px;
+max-width:500px;
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+transform:perspective(1000px) rotateX(5deg);
+}
+
+h1{
+font-size:32px;
+}
+
+p{
+font-size:18px;
+line-height:1.6;
+}
+
+/* Rose Petal */
+
+.petal{
+position:absolute;
+top:-50px;
+font-size:22px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0.8;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>🌸 শুভ জন্মদিন Tabassum 🌸</h1>
+
+<p>
+আজকের এই বিশেষ দিনে আল্লাহর কাছে দোয়া করি  
+তোমার জীবন সুখ, শান্তি ও বরকতে ভরে উঠুক।  
+
+আল্লাহ তোমাকে সুস্থতা, দীর্ঘ জীবন এবং  
+প্রতিটি কাজে সফলতা দান করুন।  
+
+তোমার প্রতিটি দিন হোক আনন্দ, ভালোবাসা  
+ও সুন্দর মুহূর্তে ভরা।  
+
+🤲 আবারও শুভ জন্মদিন।
+</p>
+</div>
+
+<script>
+
+/* petals generator */
+
+for(let i=0;i<25;i++){
+let petal=document.createElement("div");
+petal.className="petal";
+petal.innerHTML="🌹";
+petal.style.left=Math.random()*100+"%";
+petal.style.animationDuration=(5+Math.random()*5)+"s";
+petal.style.fontSize=(18+Math.random()*15)+"px";
+document.body.appendChild(petal);
+}
+
+</script>
+
+</body>
+</html>
